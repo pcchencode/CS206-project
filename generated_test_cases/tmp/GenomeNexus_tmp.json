@@ -1,0 +1,16 @@
+[
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "variant_id": "some_variant_id"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {},
+    "expected_response": 400
+  }
+]

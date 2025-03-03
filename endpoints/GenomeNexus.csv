@@ -1,0 +1,7 @@
+﻿method,path
+POST,/annotation
+POST,/annotation/dbsnp
+GET,/annotation/dbsnp/{variantId}
+POST,/annotation/genomic
+GET,/annotation/genomic/{genomicLocation}
+GET,/annotation/{variant}

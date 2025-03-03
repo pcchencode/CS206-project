@@ -1,0 +1,75 @@
+[
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "text": "Hello world!"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "text": ""
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/check.json",
+    "method": "POST",
+    "parameters": {
+      "text": "Hello world!"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/health",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/languages",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/test",
+    "method": "POST",
+    "parameters": {
+      "text": "This is a test"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/words",
+    "method": "GET",
+    "parameters": {
+      "username": "user123",
+      "api_key": "abc123"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/words/add",
+    "method": "POST",
+    "parameters": {
+      "word": "testword",
+      "username": "user123",
+      "api_key": "abc123"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/words/delete",
+    "method": "POST",
+    "parameters": {
+      "word": "testword",
+      "username": "user123",
+      "api_key": "abc123"
+    },
+    "expected_response": 200
+  }
+]

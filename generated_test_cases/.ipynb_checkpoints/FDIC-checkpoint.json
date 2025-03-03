@@ -1,0 +1,62 @@
+[
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "institution": "ABC123",
+      "portfolio": "EQ"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "institution": "",
+      "portfolio": "EQ"
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/institution",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/institution",
+    "method": "GET",
+    "parameters": {
+      "format": "json"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/location",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/summary",
+    "method": "GET",
+    "parameters": {
+      "download": true
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/failures",
+    "method": "GET",
+    "parameters": {
+      "filename": "failures.csv"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/history",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 400
+  }
+]

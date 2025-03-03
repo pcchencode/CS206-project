@@ -1,0 +1,83 @@
+[
+  {
+    "endpoint": "/albums/3KuXEGcqLcnEYWnn3OEGy0",
+    "method": "GET",
+    "parameters": {
+      "market": "US"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/albums/invalid_album_id",
+    "method": "GET",
+    "parameters": {
+      "market": "US"
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/artists/1vCWHaC5f2uS3yhpwWbIA6",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/artists/invalid_artist_id",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/playlists/37i9dQZF1DXcBWIGoYBM5M",
+    "method": "GET",
+    "parameters": {
+      "market": "US",
+      "fields": "items(added_by.id,track(name,href,album(name,href)))"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/playlists/invalid_playlist_id",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks",
+    "method": "POST",
+    "parameters": {
+      "uris": [
+        "spotify:track:4iV5W9uYEdYUVa79Axb7Rh",
+        "spotify:track:1301WleyT98MSxVHPZCA6M"
+      ],
+      "position": 0
+    },
+    "expected_response": 201
+  },
+  {
+    "endpoint": "/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks",
+    "method": "POST",
+    "parameters": {
+      "uris": []
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks",
+    "method": "POST",
+    "parameters": {
+      "uris": [
+        "invalid_uri"
+      ]
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/albums/3KuXEGcqLcnEYWnn3OEGy0",
+    "method": "GET",
+    "parameters": {
+      "market": "DE"
+    },
+    "expected_response": 200
+  }
+]

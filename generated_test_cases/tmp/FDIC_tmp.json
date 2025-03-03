@@ -1,0 +1,123 @@
+[
+  {
+    "endpoint": "/institutions",
+    "method": "GET",
+    "parameters": {
+      "name": "example",
+      "state": "CA",
+      "city": "Los Angeles",
+      "location_id": "12345",
+      "page": 1,
+      "pageSize": 50,
+      "sort_by": "institution_id",
+      "ascending": true,
+      "format": "json",
+      "download": false,
+      "filename": "institutions_data"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/institutions",
+    "method": "GET",
+    "parameters": {
+      "name": "",
+      "state": "",
+      "city": "",
+      "location_id": "",
+      "page": 1,
+      "pageSize": 50,
+      "sort_by": "",
+      "ascending": false,
+      "format": "csv",
+      "download": true,
+      "filename": ""
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/institutions",
+    "method": "GET",
+    "parameters": {
+      "name": "invalid_name",
+      "state": "XX",
+      "city": "Invalid City",
+      "location_id": "abcde"
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/institutions",
+    "method": "GET",
+    "parameters": {
+      "page": 1,
+      "pageSize": 1000
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/institutions",
+    "method": "GET",
+    "parameters": {
+      "sort_by": "non_existent_field"
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/locations",
+    "method": "GET",
+    "parameters": {
+      "institution_id": "67890",
+      "name": "Main Campus",
+      "page": 2,
+      "pageSize": 100,
+      "sort_by": "location_id",
+      "ascending": true,
+      "format": "json",
+      "download": false,
+      "filename": "locations_data"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/summary",
+    "method": "GET",
+    "parameters": {
+      "fiscal_year": "2023"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/risks/views",
+    "method": "GET",
+    "parameters": {
+      "institution_id": "54321",
+      "page": 1,
+      "pageSize": 25,
+      "sort_by": "risk_score",
+      "ascending": false,
+      "format": "csv",
+      "download": true
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/sod",
+    "method": "GET",
+    "parameters": {
+      "id": "456789",
+      "state": "TX",
+      "year": "2022"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/demographics",
+    "method": "GET",
+    "parameters": {
+      "state": "FL",
+      "year": "2021"
+    },
+    "expected_response": 200
+  }
+]

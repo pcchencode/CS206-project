@@ -1,0 +1,7 @@
+﻿method,path
+GET,/institutions
+GET,/locations
+GET,/history
+GET,/financials
+GET,/summary
+GET,/demographics

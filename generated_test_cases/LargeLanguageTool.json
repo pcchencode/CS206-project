@@ -1,0 +1,95 @@
+[
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "text": "This is a test sentence.",
+      "language": "en-US"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "text": "C'est une phrase de test.",
+      "language": "fr",
+      "enabledRules": "GRAMMAR"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "text": "Dies ist ein Test.",
+      "language": "de-DE",
+      "disabledCategories": "TYPOGRAPHY"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "text": "",
+      "language": "en-US"
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "text": "This is a test sentence.",
+      "language": "auto",
+      "preferredVariants": "en-GB"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/languages",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/words",
+    "method": "GET",
+    "parameters": {
+      "username": "test_user",
+      "apiKey": "test_api_key",
+      "limit": 5,
+      "offset": 0
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/words",
+    "method": "GET",
+    "parameters": {
+      "username": "test_user",
+      "apiKey": "test_api_key",
+      "dicts": "custom_dict"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/words",
+    "method": "GET",
+    "parameters": {
+      "username": "test_user",
+      "apiKey": "wrong_api_key"
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/check",
+    "method": "POST",
+    "parameters": {
+      "text": "Das ist ein Beispieltext.",
+      "language": "xx-XX"
+    },
+    "expected_response": 400
+  }
+]

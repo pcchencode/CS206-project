@@ -1,0 +1,70 @@
+[
+  {
+    "endpoint": "/users/smedjan",
+    "method": "GET",
+    "parameters": {
+      "user_id": "smedjan"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/users/invalid_user",
+    "method": "GET",
+    "parameters": {
+      "user_id": "invalid_user"
+    },
+    "expected_response": 404
+  },
+  {
+    "endpoint": "/tracks/7ouMYWpwJ422jRcDASZB7P",
+    "method": "GET",
+    "parameters": {
+      "track_id": "7ouMYWpwJ422jRcDASZB7P"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/tracks/invalid_track",
+    "method": "GET",
+    "parameters": {
+      "track_id": "invalid_track"
+    },
+    "expected_response": 404
+  },
+  {
+    "endpoint": "/tracks",
+    "method": "GET",
+    "parameters": {
+      "include_groups": "album,single"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/tracks",
+    "method": "GET",
+    "parameters": {},
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/tracks",
+    "method": "POST",
+    "parameters": {},
+    "expected_response": 405
+  },
+  {
+    "endpoint": "/shows",
+    "method": "GET",
+    "parameters": {
+      "ids": ""
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/tracks",
+    "method": "GET",
+    "parameters": {
+      "ids": "7ouMYWpwJ422jRcDASZB7P,123"
+    },
+    "expected_response": 200
+  }
+]

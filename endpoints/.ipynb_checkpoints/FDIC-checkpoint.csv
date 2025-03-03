@@ -1,0 +1,4 @@
+﻿method,path
+GET,institutions
+GET,locations
+GET,history

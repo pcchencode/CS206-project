@@ -1,0 +1,5 @@
+﻿method,path
+GET,/albums/{id}
+GET,/artists/{id}
+GET,/playlists/{playlist_id}
+POST,/playlists/{playlist_id}/tracks

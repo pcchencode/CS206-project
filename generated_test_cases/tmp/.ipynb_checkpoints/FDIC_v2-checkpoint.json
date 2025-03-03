@@ -1,0 +1,143 @@
+[
+  {
+    "endpoint": "/annotation",
+    "method": "POST",
+    "parameters": {
+      "variants": [
+        "1:g.182712A>C",
+        "2:g.265023C>T",
+        "3:g.319781del"
+      ]
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/annotation",
+    "method": "POST",
+    "parameters": {
+      "variants": [
+        "17:g.41242962_41242963insGA"
+      ],
+      "isoformOverrideSource": "uniprot",
+      "fields": [
+        "clinvar",
+        "hotspots"
+      ]
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/annotation/dbsnp",
+    "method": "POST",
+    "parameters": {
+      "variantIds": [
+        "rs116035550",
+        "rs123456"
+      ],
+      "fields": [
+        "annotation_summary",
+        "my_variant_info"
+      ]
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/annotation/dbsnp/rs116035550",
+    "method": "GET",
+    "parameters": {
+      "isoformOverrideSource": "uniprot",
+      "fields": [
+        "oncokb",
+        "signal"
+      ]
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/annotation/genomic",
+    "method": "POST",
+    "parameters": {
+      "genomicLocations": [
+        {
+          "chromosome": "7",
+          "start": 140453136,
+          "end": 140453136,
+          "referenceAllele": "A",
+          "variantAllele": "T"
+        },
+        {
+          "chromosome": "1",
+          "start": 1385015,
+          "end": 1387562,
+          "referenceAllele": "G",
+          "variantAllele": "A"
+        }
+      ],
+      "fields": [
+        "clinvar",
+        "mutation_assessor"
+      ]
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/annotation/genomic/7,140453136,140453136,A,T",
+    "method": "GET",
+    "parameters": {
+      "isoformOverrideSource": "uniprot",
+      "fields": [
+        "annotation_summary",
+        "clinvar"
+      ]
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/annotation/17:g.41242962_41242963insGA",
+    "method": "GET",
+    "parameters": {
+      "fields": [
+        "hotspots",
+        "signal"
+      ]
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/annotation",
+    "method": "POST",
+    "parameters": {
+      "variants": [],
+      "fields": [
+        "annotation_summary"
+      ]
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/annotation/dbsnp",
+    "method": "POST",
+    "parameters": {
+      "variantIds": [
+        "invalid_variant"
+      ]
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/annotation/genomic",
+    "method": "POST",
+    "parameters": {
+      "genomicLocations": [
+        {
+          "chromosome": "X",
+          "start": -1,
+          "end": 140453136,
+          "referenceAllele": "A",
+          "variantAllele": "T"
+        }
+      ]
+    },
+    "expected_response": 400
+  }
+]

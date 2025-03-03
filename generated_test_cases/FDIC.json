@@ -1,0 +1,108 @@
+[
+  {
+    "endpoint": "/institutions",
+    "method": "GET",
+    "parameters": {
+      "filters": "STNAME:\"West Virginia\"",
+      "limit": 10,
+      "offset": 0,
+      "sort_by": "OFFICES",
+      "sort_order": "DESC"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/institutions",
+    "method": "GET",
+    "parameters": {
+      "filters": "STNAME:(\"West Virginia\",\"Delaware\")",
+      "search": "NAME: BANK",
+      "fields": "NAME,ACTIVE,CERT,DEP",
+      "limit": 5
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/locations",
+    "method": "GET",
+    "parameters": {
+      "filters": "STNAME:\"Oregon\" AND SERVTYPE:11",
+      "fields": "NAME,UNINUM,SERVTYPE,CITY,STNAME,ZIP",
+      "sort_by": "NAME",
+      "sort_order": "ASC"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/history",
+    "method": "GET",
+    "parameters": {
+      "filters": "STATE:\"VIRGINIA\"",
+      "search": "NAME: FIRST BANK",
+      "fields": "INSTNAME,CERT,PCITY,PSTALP,PZIP5",
+      "sort_by": "PROCDATE",
+      "sort_order": "DESC",
+      "limit": 15
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/financials",
+    "method": "GET",
+    "parameters": {
+      "filters": "ASSET:[1000 TO 9999]",
+      "fields": "CERT,REPDTE,ASSET,DEP",
+      "sort_by": "REPDTE",
+      "sort_order": "ASC",
+      "limit": 20
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/summary",
+    "method": "GET",
+    "parameters": {
+      "filters": "STNAME:\"Alabama\" AND YEAR:2005",
+      "fields": "STNAME,YEAR,INTINC,EINTEXP,NIM,NETINC",
+      "sort_by": "YEAR",
+      "sort_order": "DESC",
+      "limit": 10
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/demographics",
+    "method": "GET",
+    "parameters": {
+      "filters": "CERT:14 AND REPDTE:20230630"
+    },
+    "expected_response": 200
+  },
+  {
+    "endpoint": "/institutions",
+    "method": "GET",
+    "parameters": {
+      "filters": "INVALID_FIELD:TEST",
+      "limit": 5
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/history",
+    "method": "GET",
+    "parameters": {
+      "filters": "PROCDATE:[2025-01-01 TO 2025-12-31]"
+    },
+    "expected_response": 400
+  },
+  {
+    "endpoint": "/financials",
+    "method": "GET",
+    "parameters": {
+      "filters": "CERT:14",
+      "fields": "INVALID_FIELD",
+      "limit": 5
+    },
+    "expected_response": 400
+  }
+]

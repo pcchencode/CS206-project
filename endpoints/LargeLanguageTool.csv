@@ -1,0 +1,4 @@
+﻿method,path
+POST,/check
+GET,/languages
+GET,/words
