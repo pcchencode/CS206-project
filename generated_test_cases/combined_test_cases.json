@@ -1,0 +1,3370 @@
+{
+    "deepseek-r1:8b": {
+        "/FDIC": [
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/institution",
+                "method": "GET",
+                "parameters": {
+                    "id": "123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/location",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "action": "process"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/failure",
+                "method": "GET",
+                "parameters": {
+                    "id": "error1"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/history",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/institutions",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/institutions",
+                "method": "GET",
+                "parameters": {
+                    "name": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/locations",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/locations",
+                "method": "GET",
+                "parameters": {
+                    "city": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/summary-data",
+                "method": "POST",
+                "parameters": {
+                    "data": {
+                        "type": "financial"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/summary-data",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/history",
+                "method": "GET",
+                "parameters": {
+                    "date_range": "last_year"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/history",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/financial-data",
+                "method": "POST",
+                "parameters": {
+                    "report_type": "income"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/financial-data",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/sod",
+                "method": "GET",
+                "parameters": {
+                    "id": "123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/sod",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/demographics",
+                "method": "POST",
+                "parameters": {
+                    "data": {
+                        "age_group": "25-35"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/demographics",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "hello",
+                    "para2": "world"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "",
+                    "para2": "world"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/api/institutions",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/locations",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/summary",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/failure",
+                "method": "POST",
+                "parameters": {
+                    "error_code": "500",
+                    "message": "Internal Server Error"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/api/history",
+                "method": "GET",
+                "parameters": {
+                    "start_date": "2023-01-01",
+                    "end_date": "2023-12-31"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/financial",
+                "method": "POST",
+                "parameters": {
+                    "institution_id": "123",
+                    "amount": 1000.0,
+                    "date": "2023-11-15"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/sod",
+                "method": "GET",
+                "parameters": {
+                    "certification_id": "456",
+                    "year": 2023
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/demographics",
+                "method": "GET",
+                "parameters": {
+                    "gender": "male",
+                    "age": 25
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/institutions",
+                "method": "GET",
+                "parameters": {
+                    "name": "test_institution"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/locations",
+                "method": "GET",
+                "parameters": {
+                    "location_id": "789",
+                    "country": "USA"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/summary",
+                "method": "GET",
+                "parameters": {
+                    "type": "financial",
+                    "range": "annual"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/failure",
+                "method": "POST",
+                "parameters": {
+                    "error_code": "404",
+                    "message": "Not Found"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/api/history",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "test123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/financial",
+                "method": "POST",
+                "parameters": {
+                    "institution_id": "abc123",
+                    "amount": 2500.0,
+                    "date": "2023-11-15"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/sod",
+                "method": "GET",
+                "parameters": {
+                    "certification_id": "xyz789",
+                    "year": 2024
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/demographics",
+                "method": "GET",
+                "parameters": {
+                    "gender": "female",
+                    "age": 30
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "download": true
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/v1/institutions",
+                "method": "GET",
+                "parameters": {
+                    "format": "json",
+                    "download": false
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/v1/locations",
+                "method": "POST",
+                "parameters": {
+                    "filename": "location_data.json"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/api/v1/summary",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/v1/failure",
+                "method": "POST",
+                "parameters": {
+                    "format": "csv"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/api/v1/history",
+                "method": "GET",
+                "parameters": {
+                    "download": true,
+                    "filename": "history_file.json"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/v1/financial",
+                "method": "POST",
+                "parameters": {
+                    "agg_term_fields": [
+                        "YEAR"
+                    ],
+                    "format": "json"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/v1/sod",
+                "method": "GET",
+                "parameters": {
+                    "filename": ""
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/v1/demographics",
+                "method": "POST",
+                "parameters": {
+                    "download": false,
+                    "format": "xml"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "fileFormat": "json",
+                    "download": false,
+                    "filename": "data_file"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/get",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "fileFormat": "",
+                    "download": true,
+                    "filename": ""
+                },
+                "expected_response": 400
+            }
+        ],
+        "/LargeLanguageTool": [
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "value1",
+                    "para2": "value2"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "",
+                    "para2": "value2"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check/another",
+                "method": "POST",
+                "parameters": {
+                    "param": "test"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check/another",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check/another",
+                "method": "POST",
+                "parameters": {
+                    "invalid_param": "value"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check/get",
+                "method": "GET",
+                "parameters": {
+                    "para1": "test_get"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check/get",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check/get",
+                "method": "GET",
+                "parameters": {
+                    "para1": "invalid_get"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check/post",
+                "method": "POST",
+                "parameters": {
+                    "data": "test_post"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "add_word",
+                    "username": "test_user",
+                    "api_key": "fake_key",
+                    "dictionary_name": "new_dict"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "",
+                    "username": "test_user",
+                    "api_key": "fake_key",
+                    "dictionary_name": "new_dict"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "delete_word",
+                    "username": "test_user",
+                    "api_key": "fake_key",
+                    "dictionary_name": "existing_dict"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "nonexistent_word",
+                    "username": "test_user",
+                    "api_key": "fake_key",
+                    "dictionary_name": "existing_dict"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "testWord",
+                    "username": "testUser",
+                    "apiKey": "fakeApiKey",
+                    "dict": "default"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "testWord",
+                    "username": "testUser",
+                    "apiKey": "fakeApiKey",
+                    "dict": "default"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "offset": 0,
+                    "limit": 10
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "offset": 20,
+                    "limit": 50
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "test_word",
+                    "username": "test_user",
+                    "apiKey": "valid_api_key",
+                    "dict": "default_dict"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "test_word",
+                    "username": "test_user",
+                    "apiKey": "valid_api_key"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "invalid_param": "value"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check/metrics",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "params": "invalid"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "test_word",
+                    "username": "test_user",
+                    "apiKey": "fake_api_key",
+                    "dict": "user_dict"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "duplicate_word",
+                    "username": "test_user",
+                    "apiKey": "fake_api_key",
+                    "dict": "user_dict"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "test_word",
+                    "username": "test_user",
+                    "apiKey": "fake_api_key",
+                    "dict": "user_dict"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/stats",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "name": "check"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check/health",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "hello",
+                    "username": "user123",
+                    "apiKey": "fake-api-key"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "goodbye",
+                    "username": "user456",
+                    "apiKey": "another-fake-api-key"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "POST",
+                "parameters": {
+                    "name": "John Doe",
+                    "email": "john.doe@example.com"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users/123",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users/456",
+                "method": "POST",
+                "parameters": {
+                    "name": "Jane Smith",
+                    "email": "jane.smith@example.com"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "Hello",
+                    "username": "testuser",
+                    "apiKey": "dummykey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "Goodbye",
+                    "username": "testuser",
+                    "apiKey": "dummykey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "value1",
+                    "para2": "value2"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "",
+                    "para2": "value2"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "pageNumber": 1,
+                    "pageSize": 10
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "testWord123",
+                    "username": "testUser123",
+                    "apiKey": "testApiKey456",
+                    "dict": "defaultDictionary"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "testWord123",
+                    "username": "testUser123",
+                    "apiKey": "testApiKey456",
+                    "dict": "defaultDictionary"
+                },
+                "expected_response": 200
+            }
+        ],
+        "/GenomeNexus": [
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "val1",
+                    "para2": "val2"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "",
+                    "para2": "val2"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/vep",
+                "method": "GET",
+                "parameters": {
+                    "gene_id": "123",
+                    "condition": "disease"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf",
+                "method": "POST",
+                "parameters": {
+                    "alt": "A",
+                    "position": 10,
+                    "ref": "C"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf",
+                "method": "POST",
+                "parameters": {
+                    "alt": "A",
+                    "position": "1234",
+                    "ref": "T"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/vue",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "POST",
+                "parameters": {
+                    "name": "John Doe",
+                    "email": "john.doe@example.com"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/products",
+                "method": "GET",
+                "parameters": {
+                    "id": "123",
+                    "category": "electronics"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check/invalid",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 404
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "val1",
+                    "para2": "val2"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "",
+                    "para2": "val2"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "POST",
+                "parameters": {
+                    "name": "test",
+                    "email": "test@example.com"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/products",
+                "method": "GET",
+                "parameters": {
+                    "category": "electronics"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/vep",
+                "method": "POST",
+                "parameters": {
+                    "version": {
+                        "static": true,
+                        "version": "1.0"
+                    },
+                    "vepPredictedProteinEffect": "Null"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/vep",
+                "method": "POST",
+                "parameters": {
+                    "ref": "",
+                    "position": "12345"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/api/vue",
+                "method": "GET",
+                "parameters": {
+                    "genomicLocation": "chr1:12345-12355",
+                    "mutationOrigin": "Alteration"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/vue",
+                "method": "POST",
+                "parameters": {
+                    "version": {
+                        "static": true,
+                        "version": "2.0"
+                    },
+                    "vueProperties": {
+                        "id": "ABC123",
+                        "source": "NCBI"
+                    }
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/api/version",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/version",
+                "method": "POST",
+                "parameters": {
+                    "version": {
+                        "static": false,
+                        "version": "3.0"
+                    }
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "name": "Valid Name",
+                    "age": 30
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "name": "",
+                    "age": 25
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {
+                    "queryParam": "value"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "name": "test",
+                    "age": "30"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "name": "",
+                    "age": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "name": "check"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "name": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/genomic_location",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/genomic_location",
+                "method": "POST",
+                "parameters": {
+                    "GenomicLocation": {
+                        "name": "loc1",
+                        "coordinates": [
+                            10,
+                            20
+                        ]
+                    }
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/vep",
+                "method": "POST",
+                "parameters": {
+                    "region": "1:100000-200000",
+                    "samples": [
+                        "HS1234",
+                        "HS5678"
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vep",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/vep",
+                "method": "GET",
+                "parameters": {
+                    "region": "3:1-5"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vues",
+                "method": "POST",
+                "parameters": {
+                    "transcriptId": "ENST00000425024.2",
+                    "variant": "NM_001258873.1",
+                    "confirmed": true,
+                    "defaultEffect": "null"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vue-references",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/version",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/create-vue-reference",
+                "method": "POST",
+                "parameters": {
+                    "pubmedId": 123456,
+                    "referenceText": "This is a reference text."
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "alt": "ALT_VALUE",
+                    "position": "POS_value",
+                    "ref": "REF_value"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "position": "POS_value",
+                    "ref": "REF_value"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/api/vep",
+                "method": "POST",
+                "parameters": {
+                    "file": "example.fasta",
+                    "accession": "ABC123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/vue",
+                "method": "GET",
+                "parameters": {
+                    "gene": "EGOC1"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/compare",
+                "method": "POST",
+                "parameters": {
+                    "query": "ABC123",
+                    "reference": "DEF456"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/vep",
+                "method": "POST",
+                "parameters": {
+                    "context": {
+                        "start_pos": 10,
+                        "end_pos": 15,
+                        "sense_or_nonsense": "sense",
+                        "genomic_context": "g.1000000",
+                        "gene_symbol": "BRCA1"
+                    },
+                    "mutation_origin": {
+                        "source": "Germline",
+                        "type": "point mutation"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vues",
+                "method": "GET",
+                "parameters": {
+                    "vep Predicted Protein Effect": {
+                        "description": "Hypothetical effect on protein function",
+                        "impact": "high",
+                        "mode": "null"
+                    },
+                    "revisedProteinEffect": "null",
+                    "mutationOrigin": "Germline",
+                    "hugoGeneSymbol": "BRCA1",
+                    "genomicLocation": "g.1000000",
+                    "references": [
+                        {
+                            "pubmedId": 123456,
+                            "referenceText": "Reference text 1"
+                        }
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "val1",
+                    "para2": "val2"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "para1": "",
+                    "para2": "val2"
+                },
+                "expected_response": 400
+            }
+        ],
+        "/Spotify": [
+            {
+                "endpoint": "/users/{user_id}",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users/{user_id}/activity",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "include_groups": ""
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "include_groups": "album"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "include_groups": "single"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "include_groups": "appears_on"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "include_groups": "compilation"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "include_groups": "album,single"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": "4VqPOruhp5EdPBeR92t6lQ,7ouMYWpwJ422jRcDASZB7P"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks/invalid",
+                "method": "GET",
+                "parameters": {
+                    "ids": "abc123,def456"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/users/{user_id}",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/chapters/{chapter_id}",
+                "method": "GET",
+                "parameters": {
+                    "chapter_id": "12345"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {
+                    "include_groups": ""
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {
+                    "include_groups": "album,single"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/details",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/details",
+                "method": "GET",
+                "parameters": {
+                    "userId": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/search",
+                "method": "GET",
+                "parameters": {
+                    "query": "test query"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {
+                    "user_id": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/shows",
+                "method": "GET",
+                "parameters": {
+                    "ids": "5CfCWKI5pZ28U0uOzXkDHe,5as3aKmN2k11yfDDDSrvaZ"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/shows",
+                "method": "GET",
+                "parameters": {
+                    "ids": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {
+                    "include_groups": ""
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {
+                    "include_groups": "album,single"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {
+                    "include_groups": "invalid_group"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/playlists",
+                "method": "POST",
+                "parameters": {
+                    "name": "My Playlist",
+                    "user_id": "smedjan"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/chapters",
+                "method": "GET",
+                "parameters": {
+                    "ids": "0IsXVP0JmcB2adSE338GkK,3ZXb8FKZGU0EHALYX6uCzU"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/chapters",
+                "method": "GET",
+                "parameters": {
+                    "ids": "invalidID"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/user/{user_id}",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "POST",
+                "parameters": {
+                    "album_id": "XYZ123",
+                    "track_number": 5
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/track/{track_id}",
+                "method": "GET",
+                "parameters": {
+                    "track_id": "4iV5W9uYEdYUVa79Axb7Rh"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "POST",
+                "parameters": {
+                    "name": "New Album"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/album/{album_id}",
+                "method": "GET",
+                "parameters": {
+                    "album_id": "Album123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/playlists",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/playlists",
+                "method": "POST",
+                "parameters": {
+                    "name": "New Playlist"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/playlist/{playlist_id}",
+                "method": "GET",
+                "parameters": {
+                    "playlist_id": "Playlist123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/followers",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/followers",
+                "method": "POST",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 201
+            }
+        ]
+    },
+    "deepseek-r1:14b": {
+        "/FDIC": [
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {
+                    "q": "test query",
+                    "limit": 10,
+                    "offset": 0
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "body": {
+                        "key": "value"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/institutions",
+                "method": "GET",
+                "parameters": {
+                    "state": "CA",
+                    "city": "Los Angeles",
+                    "limit": 5,
+                    "offset": 0
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/institutions",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/locations",
+                "method": "GET",
+                "parameters": {
+                    "type": "urban",
+                    "state": "NY",
+                    "limit": 10,
+                    "offset": 5
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/locations",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/sod",
+                "method": "GET",
+                "parameters": {
+                    "agg_term_fields": "YEAR",
+                    "agg_sum_fields": "ASSET"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {
+                    "page": 1,
+                    "per_page": 10,
+                    "sort_by": "id",
+                    "order": "asc",
+                    "filter": "active=true"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/history",
+                "method": "GET",
+                "parameters": {
+                    "account_id": "123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/history",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/summary",
+                "method": "GET",
+                "parameters": {
+                    "account_id": "123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/summary",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/failures",
+                "method": "GET",
+                "parameters": {
+                    "status": "failed"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/failures",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/risview",
+                "method": "GET",
+                "parameters": {
+                    "institution_id": "1"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/risview",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/location",
+                "method": "GET",
+                "parameters": {
+                    "city": "New York"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/location",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/demographics",
+                "method": "GET",
+                "parameters": {
+                    "region": "US"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/demographics",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/sod",
+                "method": "GET",
+                "parameters": {
+                    "account_id": "123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/sod",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/institutions",
+                "method": "GET",
+                "parameters": {
+                    "type": "all",
+                    "format": "json",
+                    "download": false,
+                    "filename": "data_file"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/institutions",
+                "method": "GET",
+                "parameters": {
+                    "type": "invalid_type",
+                    "format": "json",
+                    "download": false,
+                    "filename": "data_file"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/locations",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/summary",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/history",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/risview",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/demographics",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/sod",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/institutions",
+                "method": "GET",
+                "parameters": {
+                    "institution_id": "12345"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/institutions",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/locations",
+                "method": "GET",
+                "parameters": {
+                    "location_id": "A1B2C3"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/locations",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/summary",
+                "method": "GET",
+                "parameters": {
+                    "year": "2023"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/summary",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/failures",
+                "method": "GET",
+                "parameters": {
+                    "id": "123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/failures",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/history",
+                "method": "GET",
+                "parameters": {
+                    "institution_id": "56789"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/history",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "data": {
+                        "key1": "value1",
+                        "key2": "value2"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "check": "all"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "check": "health"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "check": "version"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            }
+        ],
+        "/LargeLanguageTool": [
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": "Hello world!",
+                    "language": "en-US"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": "Hello worlD",
+                    "language": "en-US"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "language": "en-US"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check_batch",
+                "method": "POST",
+                "parameters": {
+                    "texts": [
+                        "Hello world!",
+                        "Goodbye!"
+                    ],
+                    "language": "en-US"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check_batch",
+                "method": "POST",
+                "parameters": {
+                    "texts": [],
+                    "language": "en-US"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 401
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "example",
+                    "username": "user123",
+                    "apiKey": "abc123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "test",
+                    "username": "user123",
+                    "apiKey": "abc123",
+                    "dict": "my_dict"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "test",
+                    "username": "user123",
+                    "apiKey": "abc123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": "Hello world!",
+                    "language": "en-US"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "language": "en-US"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check?l=en&lang=es",
+                "method": "GET",
+                "parameters": {
+                    "text": "Hola mundo!"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/about",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/health",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/supportedLanguages",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "username": "testuser",
+                    "apiKey": "testkey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "testword",
+                    "username": "testuser",
+                    "apiKey": "testkey",
+                    "dict": "main"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "nonexistent",
+                    "username": "testuser",
+                    "apiKey": "testkey",
+                    "dict": "main"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": "Hello, world!",
+                    "language": "en"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/health",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check.json",
+                "method": "POST",
+                "parameters": {
+                    "text": "Hello, world!",
+                    "language": "en"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "username": "testuser",
+                    "apiKey": "testkey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 401
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "testword",
+                    "username": "testuser",
+                    "apiKey": "testkey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "testword",
+                    "username": "testuser",
+                    "apiKey": "testkey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": "Hello world",
+                    "language": "en"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": "Hello world",
+                    "language": "xx"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check/languagedetect",
+                "method": "POST",
+                "parameters": {
+                    "text": "Bonjour",
+                    "language": null
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check/languagedetect",
+                "method": "POST",
+                "parameters": {
+                    "text": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "username": "user123",
+                    "apiKey": "validkey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "username": "invaliduser",
+                    "apiKey": "wrongkey"
+                },
+                "expected_response": 401
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "testword123",
+                    "username": "user123",
+                    "apiKey": "validkey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "testword123",
+                    "username": "user123",
+                    "apiKey": "validkey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "testword456",
+                    "username": "user123",
+                    "apiKey": "validkey"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": "This is a sample text with some errors.",
+                    "language": "en"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {
+                    "url": "http://example.com"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/languages",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/languages",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 405
+            },
+            {
+                "endpoint": "/check",
+                "method": "HEAD",
+                "parameters": {
+                    "text": "Valid text for HEAD request."
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "HEAD",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/health",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "username": "user123",
+                    "apiKey": "abc123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words",
+                "method": "GET",
+                "parameters": {
+                    "username": "user123"
+                },
+                "expected_response": 401
+            },
+            {
+                "endpoint": "/words/add",
+                "method": "POST",
+                "parameters": {
+                    "word": "newword",
+                    "username": "user123",
+                    "apiKey": "abc123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/words/delete",
+                "method": "POST",
+                "parameters": {
+                    "word": "newword",
+                    "username": "user123",
+                    "apiKey": "abc123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "text": "Hello world!",
+                    "lang": "en"
+                },
+                "expected_response": 200
+            }
+        ],
+        "/GenomeNexus": [
+            {
+                "endpoint": "/api/variant-effects",
+                "method": "POST",
+                "parameters": {
+                    "vcf": {
+                        "alt": "C",
+                        "position": "123456",
+                        "ref": "T"
+                    },
+                    "options": {
+                        "vep": {
+                            "version": "109",
+                            "static": false
+                        }
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/variant-effects",
+                "method": "POST",
+                "parameters": {
+                    "vcf": {
+                        "alt": "",
+                        "position": "123456",
+                        "ref": "T"
+                    },
+                    "options": {
+                        "vep": {
+                            "version": "invalid",
+                            "static": false
+                        }
+                    }
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/api/version",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/api/annotation",
+                "method": "POST",
+                "parameters": {
+                    "variant": "chr1:123456:T:C"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/variant/check",
+                "method": "POST",
+                "parameters": {
+                    "genomeVersion": "GRCh37",
+                    "chromosome": "1",
+                    "position": "12345",
+                    "allele": "G"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/variant/check",
+                "method": "POST",
+                "parameters": {
+                    "genomeVersion": "GRCh38",
+                    "chromosome": "2",
+                    "position": "65432"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/variant/check",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/frequency",
+                "method": "GET",
+                "parameters": {
+                    "allele": "G",
+                    "chromosome": "1",
+                    "position": "12345"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/frequency",
+                "method": "GET",
+                "parameters": {
+                    "allele": "T",
+                    "genomeVersion": "GRCh37",
+                    "chromosome": "3"
+                },
+                "expected_response": 404
+            },
+            {
+                "endpoint": "/",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "alleles": [
+                        "A",
+                        "G"
+                    ],
+                    "position": 12345,
+                    "reference": "T"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "alleles": "",
+                    "position": 12345,
+                    "reference": "T"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/vcf-info",
+                "method": "POST",
+                "parameters": {
+                    "vcf": {
+                        "alt": "G",
+                        "position": "123456789",
+                        "ref": "T"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf-info",
+                "method": "POST",
+                "parameters": {
+                    "vcf": {
+                        "position": "123456789",
+                        "ref": "T"
+                    }
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/vep-interpretation",
+                "method": "POST",
+                "parameters": {
+                    "variantType": "SNV",
+                    "vcf": {
+                        "alt": "G",
+                        "position": "123456789",
+                        "ref": "T"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vep-interpretation",
+                "method": "POST",
+                "parameters": {
+                    "variantType": "INDEL",
+                    "vcf": {
+                        "alt": "G",
+                        "position": "123456789",
+                        "ref": "T"
+                    }
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/version",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "variantType": "SNV"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "id": "test123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "id": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/annotation",
+                "method": "POST",
+                "parameters": {
+                    "id": "chr1:g.12345C>A",
+                    "consequence": [
+                        "missense_variant"
+                    ],
+                    "variant_type": "SNV",
+                    "alleles": [
+                        "A",
+                        "G"
+                    ],
+                    "genomic_position": "12345"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "vep": true,
+                    "vcf": {
+                        "alt": "G",
+                        "position": "1234567890",
+                        "ref": "A"
+                    },
+                    "build": "GRCh38",
+                    "variants": [
+                        "rs1234"
+                    ],
+                    "vueEnabled": true
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "vep": true,
+                    "build": "GRCh38"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/version",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf",
+                "method": "POST",
+                "parameters": {
+                    "vcf": {
+                        "alt": "",
+                        "position": "123456789",
+                        "ref": ""
+                    }
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/health",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf",
+                "method": "POST",
+                "parameters": {
+                    "position": "123456",
+                    "ref": "G",
+                    "alt": "A"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf",
+                "method": "POST",
+                "parameters": {
+                    "position": "7891011",
+                    "ref": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "vep": true,
+                    "vcf": {
+                        "position": "123456",
+                        "ref": "G",
+                        "alt": "A"
+                    },
+                    "include_vcf_info": false,
+                    "exclude_noncoding": true
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/check",
+                "method": "POST",
+                "parameters": {
+                    "vep": true,
+                    "include_vcf_info": false,
+                    "exclude_noncoding": true
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/submit",
+                "method": "POST",
+                "parameters": {
+                    "vcf": {
+                        "ref": "A",
+                        "position": "123456789",
+                        "alt": "T"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/status/invalid_job_id",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 404
+            },
+            {
+                "endpoint": "/results/bogus_job",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 404
+            },
+            {
+                "endpoint": "/submit",
+                "method": "POST",
+                "parameters": {
+                    "vcf": {
+                        "ref": "",
+                        "position": "123456789",
+                        "alt": ""
+                    }
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {
+                    "variant": "rs12345"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/variants",
+                "method": "POST",
+                "parameters": {
+                    "gene": "GENE123",
+                    "chromosome": "1",
+                    "position": "1000"
+                },
+                "expected_response": 201
+            },
+            {
+                "endpoint": "/vcf",
+                "method": "POST",
+                "parameters": {
+                    "ref": "A",
+                    "alt": "T",
+                    "position": "100"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {
+                    "variant": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/annotations",
+                "method": "GET",
+                "parameters": {
+                    "variant_id": "invalid123"
+                },
+                "expected_response": 404
+            },
+            {
+                "endpoint": "/variant",
+                "method": "POST",
+                "parameters": {
+                    "accession": "NC_000001.1",
+                    "hgvsNotation": "NM_001234.5:c.123G>T"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/variant",
+                "method": "POST",
+                "parameters": {
+                    "accession": "",
+                    "hgvsNotation": "NM_001234.5:c.123G>T"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/vcf",
+                "method": "POST",
+                "parameters": {
+                    "variants": [
+                        "chr1:1234:A:T",
+                        "chr2:5678:C>G"
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf",
+                "method": "POST",
+                "parameters": {
+                    "variants": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/version",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf/validate",
+                "method": "POST",
+                "parameters": {
+                    "data": {
+                        "alt": "T",
+                        "position": "19857376",
+                        "ref": "G"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/vcf/validate",
+                "method": "POST",
+                "parameters": {
+                    "data": {
+                        "alt": "",
+                        "position": "",
+                        "ref": ""
+                    }
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/variant/effects",
+                "method": "POST",
+                "parameters": {
+                    "vep": {
+                        "chrom": "1",
+                        "pos": "123456789",
+                        "ref": "G",
+                        "alt": "T"
+                    }
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/variant/effects",
+                "method": "POST",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/check",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            }
+        ],
+        "/Spotify": [
+            {
+                "endpoint": "/albums/123",
+                "method": "GET",
+                "parameters": {
+                    "market": "US",
+                    "include_tracks": true
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/artists/456 albums",
+                "method": "GET",
+                "parameters": {
+                    "include_groups": "single,appears_on",
+                    "limit": 10,
+                    "offset": 0
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/audio-features",
+                "method": "POST",
+                "parameters": {
+                    "songs": [
+                        "7ouMYWpwJ422jRcDASZB7P",
+                        "4VqPOruhp5EdPBeR92t6lQ"
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/chapters/789",
+                "method": "GET",
+                "parameters": {
+                    "market": "GB"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/playlists/101/tracks",
+                "method": "GET",
+                "parameters": {
+                    "fields": "items(track(name,artists(id)))),limit=5"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks/321",
+                "method": "GET",
+                "parameters": {
+                    "market": "JP",
+                    "include_audio_features": true
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B",
+                    "market": "US",
+                    "include_groups": "album,single",
+                    "limit": 50,
+                    "offset": 0
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B,0D5wENdkdwbqlrHoaJ9g29",
+                    "include_groups": "album"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/auth",
+                "method": "POST",
+                "parameters": {
+                    "username": "testuser",
+                    "password": "securepass123"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/auth",
+                "method": "POST",
+                "parameters": {
+                    "username": "",
+                    "password": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/me/player/currently-playing",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 401
+            },
+            {
+                "endpoint": "/me/player/currently-playing",
+                "method": "GET",
+                "headers": {
+                    "Authorization": "Bearer valid_token"
+                },
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "id": "7ouMYWpwJ422jRcDASZB7P"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {
+                    "include_groups": "invalid_group"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/artists",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/artists",
+                "method": "GET",
+                "parameters": {
+                    "q": "pop"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/playlists",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/playlists",
+                "method": "GET",
+                "parameters": {
+                    "limit": -1,
+                    "offset": -5
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/search",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/search",
+                "method": "GET",
+                "parameters": {
+                    "q": "test",
+                    "type": "track"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {
+                    "user_id": "smedjan"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {
+                    "ids": [
+                        "4iV5W9uYEdYUVa79Axb7Rh",
+                        "1301WleyT98MSxVHPZCA6M"
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": [
+                        "7ouMYWpwJ422jRcDASZB7P",
+                        "4VqPOruhp5EdPBeR92t6lQ"
+                    ],
+                    "include_groups": [
+                        "album"
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": [
+                        "invalid_id"
+                    ]
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/users/smedjan",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users/nonexistentuser",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 404
+            },
+            {
+                "endpoint": "/shows",
+                "method": "GET",
+                "parameters": {
+                    "ids": [
+                        "123",
+                        "456"
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/shows",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/chapters/abc123",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/chapters/wrongid",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 404
+            },
+            {
+                "endpoint": "/users",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users",
+                "method": "POST",
+                "parameters": {
+                    "user_data": {}
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/albums/{id}",
+                "method": "GET",
+                "parameters": {
+                    "id": "4iV5W9uYEdYUVa79Axb7Rh"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums/{id}",
+                "method": "GET",
+                "parameters": {
+                    "id": "invalid_id"
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/me",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/tracks",
+                "method": "GET",
+                "parameters": {
+                    "ids": ""
+                },
+                "expected_response": 400
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {
+                    "include_groups": "album,single"
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users/smedjan",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/users/invalid_user",
+                "method": "GET",
+                "parameters": {},
+                "expected_response": 404
+            },
+            {
+                "endpoint": "/albums",
+                "method": "GET",
+                "parameters": {
+                    "ids": [
+                        "4iV5W9uYEdYUVa79Axb7Rh"
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/albums",
+                "method": "POST",
+                "parameters": {
+                    "ids": [
+                        "invalid_album_id"
+                    ]
+                },
+                "expected_response": 405
+            },
+            {
+                "endpoint": "/artists",
+                "method": "GET",
+                "parameters": {
+                    "ids": [
+                        "6VjQBWlalHJROOOOoouu"
+                    ]
+                },
+                "expected_response": 200
+            },
+            {
+                "endpoint": "/artists",
+                "method": "GET",
+                "parameters": {
+                    "ids": [
+                        "nonexistent_id"
+                    ]
+                },
+                "expected_response": 404
+            }
+        ]
+    }
+}
