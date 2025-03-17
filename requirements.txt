@@ -1,0 +1,4 @@
+pandas==2.2.2
+ollama==0.4.7
+urllib3==2.2.3
+requests==2.32.3

@@ -45,8 +45,6 @@ pip3 install -r requirements.txt
 1. Generate the corresponding prompts: please check `prompt_generator.ipynb` and run full code.
 2. Make sure you have correctly installed the local Deepseek, and then refer `ollama_api.ipynb` and run full code to send prompts and receive responses.
 
-(waiting the fuzzing figure)
-
 3. Parse the expported responses from LLM and extract the JSON block within it. Please check `test_case_parser` and run full code to generate test cases.
 
 4. Send request to OpenAPI with test cases and check the result, please check `send_request.ipynb` and run full code.
